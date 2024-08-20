@@ -32,12 +32,12 @@ gunzip -c ${DATA_DIR}/${FASTQ_R1} | wc -l
 ###### Process the R2 file ######
 
 # Download the file
-echo "Downloading the R1 file"
+echo "Downloading the R2 file"
 curl -OsS ${FASTQ_URL}/${FASTQ_R2}
 
 # Move the file
 mv ${FASTQ_R2} ${DATA_DIR}/
 
 #Print the number of lines in the file
-echo "The R1 file has this many lines"
+echo "The R2 file has this many lines"
 gunzip -c ${DATA_DIR}/${FASTQ_R2} | wc -l
